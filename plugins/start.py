@@ -117,6 +117,21 @@ async def not_joined(client: Client, message: Message):
                 "Masuk Ke Channel",
                 url = client.invitelink)
         ]
+ @Bot.on_message(filters.command('start') & filters.private)
+
+async def not_joined(client: Client, message: Message):
+
+    buttons = [
+
+        [
+
+            InlineKeyboardButton(
+
+                "Channel 2",
+
+                url = client.invitelink)
+
+        ]
     ]
     try:
         buttons.append(
